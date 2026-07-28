@@ -5,7 +5,7 @@ class HabitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Habit
         fields = ['id', 'user', 'name', 'description', 'frequency', 'is_active', 'created_at']
-        read_only_fields = ['id', 'created_at']
+        read_only_fields = ['id', 'user', 'created_at']
 
 class HabitEntrySerializer(serializers.ModelSerializer):
     class Meta:
